@@ -21,7 +21,7 @@ function uploadimg() {
 }
 
 //Write a code to grab the key-pressed event
-window.addEventListener("keypress",my_keydown)
+window.addEventListener("keydown",my_keydown)
 
 function my_keydown(e)
 {
@@ -40,17 +40,17 @@ function my_keydown(e)
 			document.getElementById("d1").innerHTML="You pressed Number key";
 			console.log("numberkey")
 		}
-		else if(keyPressed >=37 && keyPressed<=40)
+		else if(keyPressed >='37' && keyPressed<='40')
 		{
 			arrowkey();
 			document.getElementById("d1").innerHTML="You pressed Arrow key";
 			console.log("arrowkey")
 		}
-		else if(keyPressed ==17 && keyPressed==18 && keyPressed==27)
+		else if(keyPressed ==17 || keyPressed==18 || keyPressed==27)
 		{
-			numberkey();
-			document.getElementById("d1").innerHTML="You pressed Number key";
-			console.log("numberkey")
+			specialkey();
+			document.getElementById("d1").innerHTML="You pressed Special key";
+			console.log("specialkey")
 		}	
 			else{
 			otherkey();
